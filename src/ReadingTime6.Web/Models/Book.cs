@@ -12,6 +12,9 @@ namespace ReadingTime6.Web.Models
         public string Author { get; set; }
         public string Cover { get; set; }
 
+        // add a property for ratings
+        public int Rating { get; set; }
+
         public Book()
         {
 
@@ -29,6 +32,14 @@ namespace ReadingTime6.Web.Models
             Cover = cover.Replace(".jpg",".png");
         }
 
+        // add a contructor that takes a title, author, cover, and rating
+        public Book(string title, string author, string cover, int rating)
+        {
+        Title = title;
+        Author = author;
+        Cover = cover.Replace(".jpg", ".png");
+        Rating = rating;
+        }
     }
 
 }
